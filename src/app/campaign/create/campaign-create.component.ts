@@ -17,7 +17,7 @@ interface FileReaderEvent extends Event {
 })
 
 export class CreateComponent implements OnInit, OnChanges, AfterViewInit{
-
+/*
     readURL(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
@@ -30,6 +30,7 @@ export class CreateComponent implements OnInit, OnChanges, AfterViewInit{
             
         }
     }
+    */
     ngOnInit(){
         // Code for the Validator
         var $validator = $('.wizard-card form').validate({
