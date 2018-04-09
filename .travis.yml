@@ -8,11 +8,6 @@ branches:
   only:
     - master
 
-before_script:
-
-after_success:
-  - firebase deploy --token $FIREBASE_TOKEN
-
 notifications:
   email:
     on_failure: always
