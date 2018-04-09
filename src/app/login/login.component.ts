@@ -47,6 +47,7 @@ export class LoginComponent implements OnInit {
     this.authService.login(LoginObj)
       .subscribe((resp: any) => {
         this.loginModel =resp,
+        console.log(resp),
 
         localStorage.setItem('accessToken',this.loginModel.result.accessToken),
         localStorage.setItem('encryptedAccessToken',this.loginModel.result.encryptedAccessToken),

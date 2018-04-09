@@ -9,6 +9,10 @@ export class AuthService {
 
   constructor(private http:HttpClient, private router:Router) { }
 
+  numberUp(num) {
+    return num + 1;
+  }
+
   login(obj){
     return this.http.post(this.apiUrl , obj);
   }
