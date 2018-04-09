@@ -1,0 +1,52 @@
+<div class="main-content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <h3 class="title text-center">CAMPAIGNS</h3>
+            <div class="col-lg-4 col-md-6" *ngFor="let campaign of campaigns">
+                <div class="card card-product">
+                    <div class="card-image" data-header-animation="true">
+                        <a>
+                            <img class="img" src="https://proximitydeskblob.blob.core.windows.net/{{campaign.imagePath}}">
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-actions">
+                            <button type="button" class="btn btn-danger btn-simple fix-broken-card">
+                                <i class="material-icons">build</i> Fix Header!
+                            </button>
+                            <button  type="button" class="btn btn-default btn-simple" rel="tooltip" data-placement="bottom" title="View">
+                                <i class="material-icons">art_track</i>
+                            </button>
+                            <button routerLink="/campaign/edit/{{campaign.id}}" type="button" class="btn btn-success btn-simple" rel="tooltip" data-placement="bottom" title="Edit">
+                                <i class="material-icons">edit</i>
+                            </button>
+                            <button (click)="delete(campaign.id)" type="button" class="btn btn-danger btn-simple" rel="tooltip" data-placement="bottom" title="Remove">
+                                <i class="material-icons">close</i>
+                            </button>
+                        </div>
+                        <h4 class="card-title">
+                            <a href="#pablo">{{campaign.title}}</a>
+                        </h4>
+                        <div class="card-description">
+                            {{campaign.description}}
+                            <hr>
+                            <p class="text-success">{{campaign.startDate | date:'dd.MM.yyyy'}} - {{campaign.endDate | date:'dd.MM.yyyy'}}</p>
+                            <p class="text-success">{{campaign.startTime | date:'shortTime'}} - {{campaign.endTime | date:'shortTime'}}</p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="price">
+                            <p class="text-danger"> ID: {{campaign.id}}</p>
+                        </div>
+                        <div class="stats pull-right">
+                            <p class="category">
+                                <i class="material-icons">code</i> {{campaign.code}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+                
+        </div>
+    </div>
+</div>

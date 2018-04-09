@@ -1,0 +1,236 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="col-sm-8 col-sm-offset-2">
+            <!--      Wizard container        -->
+            <div class="wizard-container">
+                <div class="card wizard-card" data-color="rose" id="wizardProfile">
+                    <form action="" method="">
+                        <!--        You can switch " data-color="purple" "  with one of the next bright colors: "green", "orange", "red", "blue"       -->
+                        <div class="wizard-header">
+                            <h3 class="wizard-title">
+                                Campaign Create
+                            </h3>
+                        </div>
+                        <div class="wizard-navigation">
+                            <ul>
+                                <li>
+                                    <a href="#about" data-toggle="tab"> Campaign Content</a>
+                                </li>
+                                <li>
+                                    <a href="#account" data-toggle="tab">Campaign Date</a>
+                                </li>
+                                <li>
+                                    <a href="#address" data-toggle="tab">Campaign Settings</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content">
+
+                            <div class="tab-pane" id="about">
+                                <div class="row">
+
+                                    <div class="col-sm-4 col-sm-offset-1">
+
+                                        <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+                                            <div class="fileinput-new thumbnail">
+                                                <img alt="..." src="../../assets/img/image_placeholder.jpg">
+                                            </div>
+                                            <div class="fileinput-preview fileinput-exists thumbnail"></div>
+                                            <div>
+                                                <span class="btn btn-rose btn-round btn-file">
+                                                    <span class="fileinput-new">Select image</span>
+                                                    <span class="fileinput-exists">Change</span>
+                                                    <input name="..." type="file">
+                                                </span>
+                                                <a class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput" href="#pablo">
+                                                    <i class="fa fa-times"></i> Remove</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-collapse">
+                                            <div class="card-header" id="headingThree" role="tab">
+                                                <h5 class="mb-0">
+                                                    <a aria-controls="collapseThree" aria-expanded="false" class="collapsed" data-toggle="collapse" href="#collapseThree">
+                                                        Is Logo Included?
+                                                        <i class="material-icons">keyboard_arrow_down</i>
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div aria-labelledby="headingThree" class="collapse" data-parent="#accordion" id="collapseThree" role="tabpanel" style="">
+                                                <div class="card-body">
+                                                    <div class="picture-container">
+                                                        <div class="picture">
+                                                            <img src="../../assets/img/default-avatar.png" class="picture-src" id="wizardPicturePreview" title="" />
+                                                            <input type="file" id="wizard-picture">
+                                                        </div>
+                                                        <h6>Choose Picture</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">code</i>
+                                            </span>
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Campaign Code
+                                                    <small>(required)</small>
+                                                </label>
+                                                <input name="firstname" type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">title</i>
+                                            </span>
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Campaign Title
+                                                    <small>(required)</small>
+                                                </label>
+                                                <input name="lastname" type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">description</i>
+                                            </span>
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Description
+                                                    <small>(required)</small>
+                                                </label>
+                                                <input name="lastname" type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">format_list_numbered</i>
+                                            </span>
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Rules
+                                                    <small>(required)</small>
+                                                </label>
+                                                <input name="lastname" type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="account">
+
+                                <h4 class="info-text"> Choose Between Dates </h4>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="card-header card-header-icon" data-background-color="rose">
+                                                <i class="material-icons">today</i>
+                                            </div>
+                                            <div class="card-content">
+                                                <h4 class="card-title">Start Date</h4>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control datetimepicker" value="07/04/2018" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="card-header card-header-icon" data-background-color="rose">
+                                                <i class="material-icons">today</i>
+                                            </div>
+                                            <div class="card-content">
+                                                <h4 class="card-title">End Date</h4>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control datepicker" value="28/04/2018" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="card-header card-header-icon" data-background-color="rose">
+                                                <i class="material-icons">av_timer</i>
+                                            </div>
+                                            <div class="card-content">
+                                                <h4 class="card-title">Start Time</h4>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control timepicker" value="08:30 " />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="card-header card-header-icon" data-background-color="rose">
+                                                <i class="material-icons">av_timer</i>
+                                            </div>
+                                            <div class="card-content">
+                                                <h4 class="card-title">End Time</h4>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control timepicker" value="21:30" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="address">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">LOCATION SETTINGS</label>
+                                            <select name="country" class="form-control">
+                                                <option disabled="" selected=""></option>
+                                                <option value="Afghanistan"> Afghanistan </option>
+                                                <option value="Albania"> Albania </option>
+                                                <option value="Algeria"> Algeria </option>
+                                                <option value="American Samoa"> American Samoa </option>
+                                                <option value="Andorra"> Andorra </option>
+                                                <option value="Angola"> Angola </option>
+                                                <option value="Anguilla"> Anguilla </option>
+                                                <option value="Antarctica"> Antarctica </option>
+                                                <option value="...">...</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">APP SETTINGS</label>
+                                            <select name="country" class="form-control">
+                                                <option disabled="" selected=""></option>
+                                                <option value="Afghanistan"> Afghanistan </option>
+                                                <option value="Albania"> Albania </option>
+                                                <option value="Algeria"> Algeria </option>
+                                                <option value="American Samoa"> American Samoa </option>
+                                                <option value="Andorra"> Andorra </option>
+                                                <option value="Angola"> Angola </option>
+                                                <option value="Anguilla"> Anguilla </option>
+                                                <option value="Antarctica"> Antarctica </option>
+                                                <option value="...">...</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="wizard-footer">
+                            <div class="pull-right">
+                                <input type='button' class='btn btn-next btn-fill btn-rose btn-wd' name='next' value='Next' />
+                                <input type='button' class='btn btn-finish btn-fill btn-rose btn-wd' name='finish' value='Finish' />
+                            </div>
+                            <div class="pull-left">
+                                <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Previous' />
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- wizard container -->
+        </div>
+    </div>
+</div>

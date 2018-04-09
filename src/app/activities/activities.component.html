@@ -1,0 +1,187 @@
+<div class="main-content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="title text-center">ACTIVITIES</h3>
+                <br />
+                <div class="nav-center">
+                    <ul class="nav nav-pills nav-pills-warning nav-pills-icons" role="tablist">
+                        <!--
+                color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
+            -->
+                        <li>
+                            <a href="#description-1" role="tab" data-toggle="tab">
+                                <i class="material-icons">shopping_cart</i> CAMPAIGNS
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#schedule-1" role="tab" data-toggle="tab">
+                                <i class="material-icons">notifications</i> NOTIFICATIONS
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#tasks-1" role="tab" data-toggle="tab">
+                                <i class="material-icons">card_giftcard</i> CHALLENGES
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tab-content">
+
+                    <div class="tab-pane" id="description-1">
+
+                        <div class="row">
+                            
+                            <div class="col-lg-4 col-md-6" *ngFor="let campaign of campaigns">
+                                <div class="card card-product">
+                                    <div class="card-image" data-header-animation="true">
+                                        <a>
+                                            <img class="img" src="https://proximitydeskblob.blob.core.windows.net/{{campaign.imagePath}}">
+                                        </a>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="card-actions">
+                                            <button type="button" class="btn btn-danger btn-simple fix-broken-card">
+                                                <i class="material-icons">build</i> Fix Header!
+                                            </button>
+                                            <button  type="button" class="btn btn-default btn-simple" rel="tooltip" data-placement="bottom" title="View">
+                                                <i class="material-icons">art_track</i>
+                                            </button>
+                                            <button routerLink="/campaign/edit/{{campaign.id}}" type="button" class="btn btn-success btn-simple" rel="tooltip" data-placement="bottom" title="Edit">
+                                                <i class="material-icons">edit</i>
+                                            </button>
+                                            <button (click)="delete(campaign.id)" type="button" class="btn btn-danger btn-simple" rel="tooltip" data-placement="bottom" title="Remove">
+                                                <i class="material-icons">close</i>
+                                            </button>
+                                        </div>
+                                        <h4 class="card-title">
+                                            <a href="#pablo">{{campaign.title}}</a>
+                                        </h4>
+                                        <div class="card-description">
+                                            {{campaign.description}}
+                                            <hr>
+                                            <p class="text-success">{{campaign.startDate | date:'dd.MM.yyyy'}} - {{campaign.endDate | date:'dd.MM.yyyy'}}</p>
+                                            <p class="text-success">{{campaign.startTime | date:'shortTime'}} - {{campaign.endTime | date:'shortTime'}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="price">
+                                            <p class="text-danger"> ID: {{campaign.id}}</p>
+                                        </div>
+                                        <div class="stats pull-right">
+                                            <p class="category">
+                                                <i class="material-icons">code</i> {{campaign.code}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane active" id="schedule-1">
+
+                        <div class="row">
+                        
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card card-product">
+                                    <div class="card-image" data-header-animation="true">
+                                        <a href="#pablo">
+                                            <img class="img" src="../assets/img/card-3.jpeg">
+                                        </a>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="card-actions">
+                                            <button type="button" class="btn btn-danger btn-simple fix-broken-card">
+                                                <i class="material-icons">build</i> Fix Header!
+                                            </button>
+                                            <button type="button" class="btn btn-default btn-simple" rel="tooltip" data-placement="bottom" title="View">
+                                                <i class="material-icons">art_track</i>
+                                            </button>
+                                            <button type="button" class="btn btn-success btn-simple" rel="tooltip" data-placement="bottom" title="Edit">
+                                                <i class="material-icons">edit</i>
+                                            </button>
+                                            <button type="button" class="btn btn-danger btn-simple" rel="tooltip" data-placement="bottom" title="Remove">
+                                                <i class="material-icons">close</i>
+                                            </button>
+                                        </div>
+                                        <h4 class="card-title">
+                                            <a href="#pablo">Office Studio</a>
+                                        </h4>
+                                        <div class="card-description">
+                                            The place is close to Metro Station and bus stop just 2 min by walk and near...
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="price">
+                                            <h4>$1.119/night</h4>
+                                        </div>
+                                        <div class="stats pull-right">
+                                            <p class="category">
+                                                <i class="material-icons">place</i> London, UK</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="tab-pane" id="tasks-1">
+
+                        <div class="row">
+                            
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card card-product">
+                                    <div class="card-image" data-header-animation="true">
+                                        <a href="#pablo">
+                                            <img class="img" src="../assets/img/card-1.jpeg">
+                                        </a>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="card-actions">
+                                            <button type="button" class="btn btn-danger btn-simple fix-broken-card">
+                                                <i class="material-icons">build</i> Fix Header!
+                                            </button>
+                                            <button type="button" class="btn btn-default btn-simple" rel="tooltip" data-placement="bottom" title="View">
+                                                <i class="material-icons">art_track</i>
+                                            </button>
+                                            <button type="button" class="btn btn-success btn-simple" rel="tooltip" data-placement="bottom" title="Edit">
+                                                <i class="material-icons">edit</i>
+                                            </button>
+                                            <button type="button" class="btn btn-danger btn-simple" rel="tooltip" data-placement="bottom" title="Remove">
+                                                <i class="material-icons">close</i>
+                                            </button>
+                                        </div>
+                                        <h4 class="card-title">
+                                            <a href="#pablo">Beautiful Castle</a>
+                                        </h4>
+                                        <div class="card-description">
+                                            The place is close to Metro Station and bus stop just 2 min by walk and near...
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="price">
+                                            <h4>$459/night</h4>
+                                        </div>
+                                        <div class="stats pull-right">
+                                            <p class="category">
+                                                <i class="material-icons">place</i> Milan, Italy</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
