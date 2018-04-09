@@ -1,5 +1,4 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { TableData } from '../md/md-table/md-table.component';
 
 import * as Chartist from 'chartist';
 
@@ -11,7 +10,7 @@ declare var $:any;
 })
 export class DashboardComponent implements OnInit, AfterViewInit{
   // constructor(private navbarTitleService: NavbarTitleService, private notificationService: NotificationService) { }
-  public tableData: TableData;
+
   startAnimationForLineChart(chart){
       var seq, delays, durations;
       seq = 0;
@@ -69,19 +68,7 @@ export class DashboardComponent implements OnInit, AfterViewInit{
   }
   // constructor(private navbarTitleService: NavbarTitleService) { }
   public ngOnInit() {
-      this.tableData = {
-          headerRow: ['ID', 'Name', 'Salary', 'Country', 'City'],
-          dataRows: [
-              ['US', 'USA', '2.920	', '53.23%'],
-              ['DE', 'Germany', '1.300', '20.43%'],
-              ['AU', 'Australia', '760', '10.35%'],
-              ['GB', 'United Kingdom	', '690', '7.87%'],
-              ['RO', 'Romania', '600', '5.94%'],
-              ['BR', 'Brasil', '550', '4.34%']
-          ]
-       };
-      /* ----------==========     Daily Sales Chart initialization    ==========---------- */
-
+  
       var dataDailySalesChart = {
           labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
           series: [

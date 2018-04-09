@@ -1,12 +1,24 @@
-# .travis.yml
+#.travis.yml
 
 language: node_js
 node_js:
-  - 6.9.5
-script: 
-  - "npm rebuild node-sass"
-  - "webpack"
-deploy:
-  provider: surge
-  domain: project-name.surge.sh
-  skip_cleanup: true
+  - "6.9"
+
+branches:
+  only:
+    - master
+
+before_script:
+  - npm install -g firebase-tools
+  - npm install -g @angular/cli
+
+script:
+  - ng build --prod
+
+after_success:
+  - firebase deploy --token $FIREBASE_TOKEN
+
+notifications:
+  email:
+    on_failure: change
+    on_success: change
