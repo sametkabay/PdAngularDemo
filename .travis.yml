@@ -1,29 +1,12 @@
+# .travis.yml
+
 language: node_js
-sudo: true
-dist: trusty
 node_js:
-  - '7'
-branches:
-    only:
-        - master
-env:
-    global:
-        - CHROME_BIN=/usr/bin/google-chrome
-        - DISPLAY=:99.0
-cache:
-  directories:
-     - node_modules
-before_install:
-     - ./scripts/install-dependencies.sh
-     - ./scripts/setup-github-access.sh
-after_success:
-    - ./scripts/delete-gh-pages.sh
-    - git status
-    - npm run build-gh-pages
-    - npm run deploy-gh-pages
-    - git checkout master
-    - sleep 10
-    - tsc -p e2e
-    - npm run e2e ./config/protractor.sauce.conf.js
-notifications:
-email: true
+  - 6.9.5
+script: 
+  - "npm rebuild node-sass"
+  - "webpack"
+deploy:
+  provider: surge
+  domain: project-name.surge.sh
+  skip_cleanup: true
