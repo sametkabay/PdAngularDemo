@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Injectable()
 export class AuthService {
 
-  private readonly apiUrl = "http://proximitydesktestapp.azurewebsites.net/api/TokenAuth/Authenticate";
+  private readonly apiUrl = "https://proximitydesktestapp.azurewebsites.net/api/TokenAuth/Authenticate";
 
   constructor(private http:HttpClient, private router:Router) { }
 
