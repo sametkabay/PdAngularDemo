@@ -15,7 +15,7 @@ declare var $: any;
 export class LoginComponent implements OnInit {
   test: Date = new Date();
   loginModel: login;
-  
+
   checkFullPageBackgroundImage() {
     var $page = $('.full-page');
     var image_src = $page.data('image');
@@ -31,29 +31,29 @@ export class LoginComponent implements OnInit {
     setTimeout(function () {
       // after 1000 ms we add the class animated to the login/register card
       $('.card').removeClass('card-hidden');
-    }, 700)
+    }, 700);
   }
 
-  constructor(private authService: AuthService, private router:Router ) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   login(tenantname: HTMLInputElement, username: HTMLInputElement, password: HTMLInputElement) {
-    
+
     const LoginObj = {
       tenancyName: tenantname.value,
       userNameOrEmailAddress: username.value,
       password: password.value
-    }
-    
+    };
+
     this.authService.login(LoginObj)
       .subscribe((resp: any) => {
-        this.loginModel =resp,
-        console.log(resp),
+        this.loginModel = resp,
+          console.log(resp),
 
-        localStorage.setItem('accessToken',this.loginModel.result.accessToken),
-        localStorage.setItem('encryptedAccessToken',this.loginModel.result.encryptedAccessToken),
-        this.router.navigate(['dashboard']);
+          localStorage.setItem('accessToken', this.loginModel.result.accessToken),
+          localStorage.setItem('encryptedAccessToken', this.loginModel.result.encryptedAccessToken),
+          this.router.navigate(['dashboard']);
       });
-      
+
   }
 
 

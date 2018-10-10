@@ -18,7 +18,6 @@ export const AppRoutes: Routes = [
         path: '',
         loadChildren: './dashboard/dashboard.module#DashboardModule',
         canActivate: [AuthGuard]
-        
       }, {
         path: '',
         loadChildren: './userpage/user.module#UserModule',
@@ -50,5 +49,4 @@ export const AppRoutes: Routes = [
       loadChildren: './login/login.module#LoginModule'
     }]
   },
-  
 ];

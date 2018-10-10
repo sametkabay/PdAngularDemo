@@ -5,31 +5,29 @@ import { Router } from '@angular/router';
 @Injectable()
 export class AuthService {
 
-  private readonly apiUrl = "https://proximitydesktestapp.azurewebsites.net/api/TokenAuth/Authenticate";
+  private readonly apiUrl = "//URL";
 
-  constructor(private http:HttpClient, private router:Router) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   numberUp(num) {
     return num + 1;
   }
 
-  login(obj){
-    return this.http.post(this.apiUrl , obj);
+  login(obj) {
+    return this.http.post(this.apiUrl, obj);
   }
 
-  isLogin():boolean {
+  isLogin(): boolean {
     const token = localStorage.getItem('accessToken');
-    
-    if(token) {
+
+    if (token) {
       return true;
 
-    }
-      
-    else {
+    } else {
       this.router.navigate(['login']);
       return false;
     }
-      
+
   }
 
 }
